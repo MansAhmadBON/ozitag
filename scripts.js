@@ -1,5 +1,5 @@
 window.onload = function () {
-    // additional task №2. Function to close an inactive submenu.
+    // additional task №1. Function to close an inactive submenu.
     function changeOpenMenu(classNameMenuItems, currentOpenItemMenu, listIndex = 2) {
         const menuItemsActive = document.querySelectorAll(classNameMenuItems);
 
@@ -28,10 +28,12 @@ window.onload = function () {
 
         arrow.forEach(arrow => {
             let subMenu = arrow.nextElementSibling;
+
             arrow.classList.add('show');
 
             arrow.addEventListener('click', function () {
                 const currentOpenItemMenu = arrow.parentNode;
+
                 subMenu.classList.toggle('open');
                 arrow.classList.toggle('active');
 
@@ -59,9 +61,5 @@ window.onload = function () {
         headerMenu.classList.toggle('active');
         document.querySelector('body').classList.toggle('scroll-block');
     });
-
-
-
-
 
 };
